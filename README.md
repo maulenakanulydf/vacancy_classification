@@ -45,6 +45,7 @@ Class labels are encoded as numerical values using `LabelEncoder`:
 from sklearn.preprocessing import LabelEncoder
 encoder = LabelEncoder()
 df['class'] = encoder.fit_transform(df['class'])
+```
 
 The DeepPavlov/rubert-base-cased BERT model was chosen for its capability to handle Russian text and its effective performance on classification tasks.
 
@@ -52,14 +53,14 @@ Dependencies
 
 Install the following libraries to work with this repository:
 
-pip install pandas
+```pip install pandas
 pip install transformers
 pip install torch
 pip install natasha
 pip install tqdm
 pip install matplotlib
 pip install scikit-learn
-pip install nltk
+pip install nltk```
 
 Experiment Descriptions and Results
 
@@ -72,4 +73,3 @@ Each hypothesis focuses on enhancing job description classification accuracy. Th
     Control Group: without_prefix — Training on raw data without preprocessing for a baseline comparison.
 
     349-Class Classification Using Information Extraction Methods: The optimal method was sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2, a balanced choice in terms of quality and speed.
-```
